@@ -37,10 +37,9 @@ Here is an example demonstrating the use of the _printf function:
 
 int main(void)
 {
-    unsigned int number = 42;
-    _printf("The number %d in binary is: %b\n", number, number);
-
-    return 0;
+	unsigned int number = 42;
+	_printf("The number %d in binary is: %b\n", number, number);
+	return 0;
 }
 
 
