@@ -9,12 +9,12 @@ int printChar(va_list arguments)
 
 int printString(va_list arguments)
 {
+	int count = 0;
 	char *s = va_arg(arguments, char *);
 
 	if (s == NULL)
 		return (0);
 
-	int count = 0;
 
 	while(s[count] != '\0')
 		count++;
@@ -23,3 +23,23 @@ int printString(va_list arguments)
 	return (count);
 }
 
+int countNum(unsigned int n)
+{
+	int count;
+	unsigned int x, y;
+	char digitChar;
+
+	if(n != 0)
+	{
+		count = 0;
+
+		x = (n / 10);
+		y = (n % 10);
+		count+=countNum(x);
+		count++;
+		digitChar = y + '0';
+		write(1, &digitChar, 1);
+		return (count);
+	}
+	return (0);
+}
