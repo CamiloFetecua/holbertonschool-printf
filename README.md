@@ -43,7 +43,7 @@ The function returns the number of characters printed (excluding the null byte u
 
 The format string is composed of zero or more directives. The following conversion specifiers are handled:
 
-<h1">Format Specifiers</h1>
+<h1>Format Specifiers</h1>
 
 Lets have a look at some of the important format specifiers
 

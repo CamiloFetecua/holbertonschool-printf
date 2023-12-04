@@ -14,9 +14,9 @@ int printString(va_list arguments)
 	if (s == NULL)
 		return (0);
 
-	int count;
+	int count = 0;
 
-	for (count = 0; s[count] != '\0'; count++)
+	while(s[count] != '\0')
 		count++;
 
 	write(1, s, count);
