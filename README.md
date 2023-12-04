@@ -85,8 +85,8 @@ https://github.com/CamiloFetecua/holbertonschool-printf
 ------------
 
 
-<a href="CamiloFetecua">
-  <img src="https://www.linkedin.com/in/camilo-fetecua-406a70298/" width="50"<p>  Camilo Fetecua</p>
+<a href="https://www.linkedin.com/in/camilo-fetecua-406a70298/">
+  <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png" width="50"<p>  Camilo Fetecua</p>
 </a>
 
 <footer><img src="https://wisynco.com/wp-content/uploads/2014/12/footer-background-011.jpg"></footer>
