@@ -29,13 +29,13 @@ hq/Betty/blob/master/betty-doc.pl)
 
 > int _printf(const char *format, ...);
 
-<h1 style="color: red; text-align: center;">Compilation 💻</h1>
+<h1>Compilation 💻</h1>
 
 -Your code will be compiled this way:
 
 >  $ gcc -Wall -Werror -Wextra -pedantic *.c
 
-<h1">Return Value</h1>
+<h1>Return Value</h1>
 
 
 The function returns the number of characters printed (excluding the null byte used to terminate output in strings). Supported Conversion Specifiers
