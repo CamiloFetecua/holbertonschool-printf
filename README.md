@@ -1,12 +1,12 @@
 <a href="https://ibb.co/NynDLsL"><img src="https://i.ibb.co/G53YV0V/printf.jpg" alt="printf" border="0"></a>
 
-<h1 style="color: red; text-align: center;">Description</h1>
+<h1>Description</h1>
 
 
 This Project Implements A Version Of The _printf Function In C, Which Produces Output According To A Specific Format. The Function Is Designed To Handle Various Conversion Specifiers And Provides Additional Features As Described Below.
 
 
-<h1 style="color: red; text-align: center;">Requeriments</h1>
+<h1>Requeriments</h1>
 
 - Allowed editors:  vi ,  vim ,  emacs
 - All your files will be compiled on Ubuntu 20.04 LTS using  gcc , using the options  -Wall -Werror -
@@ -25,7 +25,7 @@ hq/Betty/blob/master/betty-doc.pl)
 - All your header files should be include guarded
 - Note that we will not provide the  _putchar  function for this project
 
-<h1 style="color: red; text-align: center;">Function Prototype</h1>
+<h1>Function Prototype</h1>
 
 > int _printf(const char *format, ...);
 
@@ -35,7 +35,7 @@ hq/Betty/blob/master/betty-doc.pl)
 
 >  $ gcc -Wall -Werror -Wextra -pedantic *.c
 
-<h1 style="color: red; text-align: center;">Return Value</h1>
+<h1">Return Value</h1>
 
 
 The function returns the number of characters printed (excluding the null byte used to terminate output in strings). Supported Conversion Specifiers
@@ -43,7 +43,7 @@ The function returns the number of characters printed (excluding the null byte u
 
 The format string is composed of zero or more directives. The following conversion specifiers are handled:
 
-<h1 style="color: red; text-align: center;">Format Specifiers</h1>
+<h1">Format Specifiers</h1>
 
 Lets have a look at some of the important format specifiers
 
@@ -62,7 +62,7 @@ Lets have a look at some of the important format specifiers
 | %f | A floating-point number |
 
 
-<h1 style="color: red; text-align: center;">Example Usage</h1>
+<h1>Example Usage</h1>
 
 
 Here is an example demonstrating the use of the _printf function:
@@ -70,13 +70,13 @@ Here is an example demonstrating the use of the _printf function:
 
 ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191009172738/n-in-printf.jpg)
 
-<h1 style="color: red; text-align: center;">Repository</h1>
+<h1>Repository</h1>
 
 The code for this project is hosted on GitHub:
 
 https://github.com/CamiloFetecua/holbertonschool-printf
 
-<h1 style="color: red; text-align: center;">Members</h1>
+<h1>Members</h1>
 
 <a href="https://www.linkedin.com/in/brayan-salazar-perdomo-07a4321b1/">
   <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png" width="50"<p>  Brayan Steven Salazar</p>
