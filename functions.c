@@ -48,7 +48,7 @@ int countNum(unsigned int n)
 	}
 	return (0);
 }
-int prinNumsInt(va_list arguments)
+int printNumsInt(va_list arguments)
 {
 	int num, signCont = 0;
 	unsigned numberCont;
@@ -57,8 +57,8 @@ int prinNumsInt(va_list arguments)
 
 	if (num < 0)
 	{
-		write(1, '-', 1);
-		signContent = 1;
+		write(1, "-", 1);
+		signCont = 1;
 		numberCont = num * (-1);
 	}
 	else
