@@ -102,6 +102,8 @@ Camilo Fetecua
 
 <a href="https://github.com/CamiloFetecua">
  <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" width="100">
- 
+
+ </center>
+
 <footer><img src="https://wisynco.com/wp-content/uploads/2014/12/footer-background-011.jpg"></footer>
 
