@@ -1,38 +1,24 @@
-#include "main.h"
-#include <limits.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
 
+/**
+ * main - Entry point
+ *
+ * Return: 0 on success, error code otherwise
+ */
 int main(void)
 {
-    int len;
-    unsigned int ui;
+	int len, len2;
 
-    len = _printf("Vamos a intentar imprimir una oración simple.\n");
-    _printf("Longitud:[%d]\n", len);
-
-    len = _printf("Carácter:[%c]\n", 'H');
-    _printf("Longitud:[%d]\n", len);
-
-    len = _printf("Cadena:[%s]\n", "Soy una cadena !");
-    _printf("Longitud:[%d]\n", len);
-
-    ui = (unsigned int)INT_MAX + 1024;
-    len = _printf("Sin signo:[%u]\n", ui);
-    _printf("Longitud:[%d]\n", len);
-
-    len = printf("Vamos a intentar imprimir una oración simple.\n");
-    printf("Longitud:[%d]\n", len);
-
-    len = printf("Carácter:[%c]\n", 'H');
-    printf("Longitud:[%d]\n", len);
-
-    len = printf("Cadena:[%s]\n", "Soy una cadena !");
-    printf("Longitud:[%d]\n", len);
-
-    ui = (unsigned int)INT_MAX + 1024;
-    len = printf("Sin signo:[%u]\n", ui);
-    printf("Longitud:[%d]\n", len);
-
-
-    return (0);
+	len = _printf("%");
+	len2 = printf("%");
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 }
