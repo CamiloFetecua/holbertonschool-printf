@@ -14,7 +14,7 @@ int printString(va_list arguments)
 	char *s = va_arg(arguments, char *);
 
 	if (s == NULL)
-		return (0);
+		s = "(null)";
 
 
 	while(s[count] != '\0')
