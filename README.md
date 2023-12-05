@@ -76,7 +76,7 @@ The code for this project is hosted on GitHub:
 
 <a href="https://github.com/CamiloFetecua/holbertonschool-printf">
   <img src="https://i0.wp.com/www.globalemancipation.ngo/wp-content/uploads/2017/09/github-logo.png?ssl=1" width="500">
-  Click to go to the repository
+ <p> Click to go to the repository</p>
 </a>
 
 
@@ -84,7 +84,7 @@ The code for this project is hosted on GitHub:
 
 <center>
 
-Brayan Salazar
+<p>Brayan Salazar</p>
 <a href="https://www.linkedin.com/in/brayan-salazar-perdomo-07a4321b1/">
   <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png" width="50">
 </a>
@@ -95,15 +95,14 @@ Brayan Salazar
 
 ------------
 
-Camilo Fetecua
+<p>Camilo Fetecua</p>
 <a href="https://www.linkedin.com/in/camilo-fetecua-406a70298/">
   <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png" width="50">
 </a>
 
 <a href="https://github.com/CamiloFetecua">
  <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" width="100">
-
- </center>
+</center>
 
 <footer><img src="https://wisynco.com/wp-content/uploads/2014/12/footer-background-011.jpg"></footer>
 
