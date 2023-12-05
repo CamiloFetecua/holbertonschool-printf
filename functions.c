@@ -48,3 +48,24 @@ int countNum(unsigned int n)
 	}
 	return (0);
 }
+int prinNumsInt(va_list arguments)
+{
+	int num, signCont = 0;
+	unsigned numberCont;
+
+	num = va_arg(arguments, int);
+
+	if (num < 0)
+	{
+		write(1, '-', 1);
+		signContent = 1;
+		numberCont = num * (-1);
+	}
+	else
+		numberCont = num;
+
+	if (numberCont > 0)
+		return (signCont + countNum(numberCont));
+
+	return (1 + signCont);
+}
