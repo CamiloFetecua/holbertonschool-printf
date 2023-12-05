@@ -16,7 +16,6 @@ int printString(va_list arguments)
 	if (s == NULL)
 		s = "(null)";
 
-
 	while(s[count] != '\0')
 		count++;
 
