@@ -67,5 +67,5 @@ int prinNumsInt(va_list arguments)
 	if (numberCont > 0)
 		return (signCont + countNum(numberCont));
 
-	return (1 + signCont);
+	return (1);
 }
