@@ -15,18 +15,31 @@ int _printf(const char *format, ...)
 			switch (*pf)
 			{
 				case 'c'
-					count = printChar(arguments);
+					count += printChar(arguments);
 					break;
 				case 's'
-					count = printString(arguments);
+					count += printString(arguments);
+					break;
+				case 'd':
+				case 'i':
+					count += countNum(va_arg(arguments, unsigned int));
 					break;
 				case '%'
-					count = printString(arguments);
+					count += printPercent(arguments);
                                         break;
+				default:
+					write(1, "%", 1);
+					write(1, &(*pf), 1);
+					count += 2;
+					break;
 			}
 		}
+		else
+		{
+			write(1, &(*pf), 1);
+			count++;
+		}
 	}
-
 	va_end(arg_pf);
 	return (count);
 }

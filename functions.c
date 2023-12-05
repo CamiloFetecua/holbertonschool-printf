@@ -22,6 +22,12 @@ int printString(va_list arguments)
 	write(1, s, count);
 	return (count);
 }
+int printPercent(va_list arguments)
+{
+	(void)arguments;
+	write(1, "%", 1);
+	return (1);
+}
 
 int countNum(unsigned int n)
 {
