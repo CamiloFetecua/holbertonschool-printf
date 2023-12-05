@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 int _printf(const char *format, ...)
 {
@@ -24,7 +25,7 @@ int _printf(const char *format, ...)
 				case 'i':
 					count += countNum(va_arg(arguments, unsigned int));
 					break;
-				case '%'
+				case '%':
 					count += printPercent(arguments);
                                         break;
 				default:

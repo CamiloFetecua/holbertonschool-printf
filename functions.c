@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <stddef.h>
+#include <unistd.h>
 int printChar(va_list arguments)
 {
     char c = va_arg(arguments, int);
@@ -24,11 +25,10 @@ int printString(va_list arguments)
 }
 int printPercent(va_list arguments)
 {
-	(void)arguments;
-	write(1, "%", 1);
-	return (1);
+    (void)arguments; 
+    write(1, "%", 1);
+    return (1);
 }
-
 int countNum(unsigned int n)
 {
 	int count;
