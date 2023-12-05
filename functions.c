@@ -14,8 +14,10 @@ int printString(va_list arguments)
 	char *s = va_arg(arguments, char *);
 
 	if (s == NULL)
-		return (0);
-
+	{
+		write(1, "null",4)
+		return (4);
+	}
 
 	while(s[count] != '\0')
 		count++;
