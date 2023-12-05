@@ -14,10 +14,10 @@ int _printf(const char *format, ...)
 			pf++;
 			switch (*pf)
 			{
-				case 'c'
+				case 'c':
 					count += printChar(arguments);
 					break;
-				case 's'
+				case 's':
 					count += printString(arguments);
 					break;
 				case 'd':
@@ -29,17 +29,17 @@ int _printf(const char *format, ...)
                                         break;
 				default:
 					write(1, "%", 1);
-					write(1, &(*pf), 1);
+					write(1, pf, 1);
 					count += 2;
 					break;
 			}
 		}
 		else
 		{
-			write(1, &(*pf), 1);
+			write(1, pf, 1);
 			count++;
 		}
 	}
-	va_end(arg_pf);
+	va_end(arguments);
 	return (count);
 }
