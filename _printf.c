@@ -15,13 +15,13 @@ int _printf(const char *format, ...)
 			switch (*pf)
 			{
 				case 'c'
-					count = printChar(va_list arguments);
+					count = printChar(arguments);
 					break;
 				case 's'
-					count = printString(va_list arguments);
+					count = printString(arguments);
 					break;
 				case '%'
-					count = printString(va_list arguments);
+					count = printString(arguments);
                                         break;
 			}
 		}
