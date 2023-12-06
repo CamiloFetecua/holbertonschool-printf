@@ -45,3 +45,21 @@ int printU(va_list arguments)
 	}
 	return (countNum(num));
 }
+
+/**
+ * printOctal - Print an unsigned integer in octal format.
+ * @arguments: A va_list containing the unsigned integer to print.
+ *
+ * Return: The number of characters printed (excluding null-terminating byte).
+ */
+int printOctal(va_list arguments)
+{
+    unsigned int num = va_arg(arguments, unsigned int);
+
+    if (num == 0)
+    {
+        write(1, "0", 1);
+        return (1);
+    }
+    return (countNumBase(num, 8));
+}
