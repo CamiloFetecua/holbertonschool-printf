@@ -16,5 +16,6 @@ int printNumsInt(va_list arguments);
 int formatSpecifier(char format, va_list arguments);
 int printBinary(unsigned int num);
 int printU(va_list arguments);
+int printRev(va_list arguments);
 
 #endif
