@@ -22,6 +22,7 @@
 int formatSpecifier(char format, va_list arguments)
 {
 	int result = 0;
+
 	if (format == 'c')
 		result = (printChar(arguments));
 
