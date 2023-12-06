@@ -7,7 +7,17 @@
  */
 int main(void)
 {
-    _printf("%b\n", 98);
-    return (0);
+	int len, len2;
+
+	len = _printf("%u", 0);
+	len2 = printf("%u", 0);
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 }
 
