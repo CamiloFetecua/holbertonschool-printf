@@ -96,24 +96,36 @@ int printOctalRec(unsigned int num)
  * @list: string to convert
  * Return: converted string
  */
-int rot13(va_list list)
+int rot13(va_list arguments)
 {
-	int i = 0, j = 0;
-        char orden[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+    char *s = va_arg(arguments, char *);
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		for (j = 0; j < 52; j++)
-		{
-			if (s[i] == orden[j])
-			{
-				s[i] = rot13[j];
-				write (1,s[i],1);
-			}
-		}
-	}
-	return (1);
+    if (s == NULL)
+    {
+        write(1, "(null)", 6);
+        return 6;
+    }
+
+    int i, j;
+    char orden[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        char c = s[i];
+        char transformed = c;
+
+        for (j = 0; j < 52; j++)
+        {
+            if (c == orden[j])
+            {
+                transformed = rot13[j];
+                break;
+            }
+        }
+
+        write(1, &transformed, 1);
+    }
+
+    return i;
 }
-
-
