@@ -51,25 +51,21 @@ int printU(va_list arguments)
  * @list: string to convert
  * Return: converted string
  */
-int rot13(va_list arguments)
+void rot13(va_list arguments)
 {
 	char *s = va_arg(arguments, char *);
 	int i, j;
 	char orden[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char transformed, c;
-
 	if (s == NULL)
 		s = "(null)";
-	
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		c = s[i];
-		
+		char c = s[i];
 		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		{
 			transformed = c;
-
 			for (j = 0; j < 52; j++)
 			{
 				if (c == orden[j])
@@ -78,11 +74,11 @@ int rot13(va_list arguments)
 					break;
 				}
 			}
+			write(1, &transformed, 1);
 		}
-		write(1, &transformed, 1);
-	}
-	else
-	{
-	write(1, &c, 1);
+		else
+		{
+			write(1, &c, 1);
+		}
 	}
 }
