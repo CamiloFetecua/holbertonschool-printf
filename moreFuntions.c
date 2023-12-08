@@ -57,6 +57,7 @@ int rot13(va_list arguments)
 	int i, j;
 	char orden[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char transformed;
 
 	if (s == NULL)
 		s = "(null)";
@@ -66,20 +67,18 @@ int rot13(va_list arguments)
 		char c = s[i];
 		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		{
+			transformed = s[i];
+
 			for (j = 0; j < 52; j++)
 			{
-				if (c == orden[j])
+				if (s[i] == orden[j])
 				{
-					s[i] = rot13[j];
-					write(1, &s[i], 1);
+					transformed = rot13[j];
 					break;
 				}
 			}
 		}
-		else
-		{
-			write(1, &c, 1);
-		}
+		write(1, &transformed, 1);
 	}
 	return i;
 }
