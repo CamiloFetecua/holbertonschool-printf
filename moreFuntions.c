@@ -47,19 +47,73 @@ int printU(va_list arguments)
 }
 
 /**
- * printOctal - Print an unsigned integer in octal format.
- * @arguments: A va_list containing the unsigned integer to print.
+ * printOctal - Print the octal representation of an unsigned integer.
+ * @num: Unsigned integer to print in octal.
  *
- * Return: The number of characters printed (excluding null-terminating byte).
+ * Return: The count of digits printed in the octal representation.
  */
-int printOctal(va_list arguments)
+int printOctal(unsigned int num)
 {
-    unsigned int num = va_arg(arguments, unsigned int);
+    char octalDigit;
+    int count = 0;
 
     if (num == 0)
     {
         write(1, "0", 1);
-        return (1);
+        return 1;
     }
-    return (countNumBase(num, 8));
+
+    if (num > 0)
+        count += printOctalRec(num);
+
+    return count;
 }
+
+/**
+ * printOctalRec - Recursive helper function to print octal representation.
+ * @num: Unsigned integer to print in octal.
+ *
+ * Return: The count of digits printed in the octal representation.
+ */
+int printOctalRec(unsigned int num)
+{
+    char octalDigit;
+    int count = 0;
+
+    if (num > 0)
+    {
+        count += printOctalRec(num / 8);
+        octalDigit = (num % 8) + '0';
+        write(1, &octalDigit, 1);
+        count++;
+    }
+
+    return count;
+}
+
+/**
+ * rot13 - Converts string to rot13
+ * @list: string to convert
+ * Return: converted string
+ */
+int rot13(va_list list)
+{
+	int i = 0, j = 0;
+        char orden[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (s[i] == orden[j])
+			{
+				s[i] = rot13[j];
+				write (1,s[i],1);
+			}
+		}
+	}
+	return (1);
+}
+
+
