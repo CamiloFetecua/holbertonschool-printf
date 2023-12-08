@@ -47,28 +47,73 @@ int printU(va_list arguments)
 }
 
 /**
- * printRev - Print a string in reverse order.
- * @arguments: A pointer to the null-terminated string to print in reverse.
+ * printOctal - Print the octal representation of an unsigned integer.
+ * @num: Unsigned integer to print in octal.
  *
- * This function prints the characters of the input string in reverse order
- * using the write system call. It also returns the length of the original
- * string (excluding the null-terminating byte).
- *
- * Return: The length of the original string.
+ * Return: The count of digits printed in the octal representation.
  */
-int printRev(va_list arguments)
+int printOctal(unsigned int num)
 {
-	int count = 0;
-	int length;
-	char *rev = va_arg(arguments, char *);
+    char octalDigit;
+    int count = 0;
 
-	while (rev[count] != '\0')
-		count++;
+    if (num == 0)
+    {
+        write(1, "0", 1);
+        return 1;
+    }
 
-	length = count;
+    if (num > 0)
+        count += printOctalRec(num);
 
-	for (count = length - 1; count >= 0; count--)
-		write(1, &rev[count], 1);
-
-	return (length);
+    return count;
 }
+
+/**
+ * printOctalRec - Recursive helper function to print octal representation.
+ * @num: Unsigned integer to print in octal.
+ *
+ * Return: The count of digits printed in the octal representation.
+ */
+int printOctalRec(unsigned int num)
+{
+    char octalDigit;
+    int count = 0;
+
+    if (num > 0)
+    {
+        count += printOctalRec(num / 8);
+        octalDigit = (num % 8) + '0';
+        write(1, &octalDigit, 1);
+        count++;
+    }
+
+    return count;
+}
+
+/**
+ * rot13 - Converts string to rot13
+ * @list: string to convert
+ * Return: converted string
+ */
+int rot13(va_list list)
+{
+	int i = 0, j = 0;
+        char orden[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (s[i] == orden[j])
+			{
+				s[i] = rot13[j];
+				write (1,s[i],1);
+			}
+		}
+	}
+	return (1);
+}
+
+
