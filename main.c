@@ -12,6 +12,9 @@ int main(void)
 	len = _printf("%u", 0);
 	len2 = printf("%u", 0);
 	fflush(stdout);
+	_printf("Unsigned octal:[%o]\n", ui);
+	printf("Unsigned octal:[%o]\n", ui);
+	
 	if (len != len2)
 	{
 		printf("Lengths differ.\n");
