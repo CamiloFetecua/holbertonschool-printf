@@ -62,7 +62,7 @@ int rot13(va_list arguments)
 		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		char c = s[i];
+		c = s[i];
 		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		{
 			transformed = c;
