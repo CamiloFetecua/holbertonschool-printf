@@ -51,7 +51,7 @@ int printU(va_list arguments)
  * @list: string to convert
  * Return: converted string
  */
-void rot13(va_list arguments)
+int rot13(va_list arguments)
 {
 	char *s = va_arg(arguments, char *);
 	int i, j;
@@ -81,4 +81,5 @@ void rot13(va_list arguments)
 			write(1, &c, 1);
 		}
 	}
+	return (i);
 }
