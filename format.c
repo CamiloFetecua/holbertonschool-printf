@@ -21,31 +21,28 @@
  */
 int formatSpecifier(char format, va_list arguments)
 {
-	int result = 0;
-
 	if (format == 'c')
-		result = (printChar(arguments));
+		return (printChar(arguments));
 
-	else if (format == 's')
-		result = (printString(arguments));
+	if (format == 's')
+		return (printString(arguments));
 
-	else if (format == 'd' || format == 'i')
-		result = (printNumsInt(arguments));
+	if (format == 'd' || format == 'i')
+		return (printNumsInt(arguments));
 
-	else if (format == '%')
-		result = (printPercent(arguments));
+	if (format == '%')
+		return (printPercent(arguments));
 
-	else if (format == 'b')
-		result = (printBinary(va_arg(arguments, unsigned int)));
+	if (format == 'b')
+		return (printBinary(va_arg(arguments, unsigned int)));
 
-	else if (format == 'u')
-		result = (printU(arguments));
-	else
-	{
-		write(1, "%", 1);
-		write(1, &format, 1);
-		result = 2;
-	}
-	return (result);
+	if (format == 'u')
+		return (printU(arguments));
+
+	if (format == 'r')
+		return (printRev(arguments));
+
+	write(1, "%", 1);
+	write(1, &format, 1);
+	return (2);
 }
-

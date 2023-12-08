@@ -1,16 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
+
 
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Return: 0 on success, error code otherwise
  */
 int main(void)
 {
 	int len, len2;
 
-	len = _printf("%u", 0);
-	len2 = printf("%u", 0);
+	len = _printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
+	len2 = printf("Complete the sentence: You  nothing, Jon Snow.\n");
 	fflush(stdout);
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
@@ -23,4 +26,3 @@ int main(void)
 	}
 	return (0);
 }
-
