@@ -17,7 +17,9 @@ int formatSpecifier(char format, va_list arguments);
 int printBinary(unsigned int num);
 int printU(va_list arguments);
 int printOctal(va_list arguments);
-
+int printOctal(unsigned int num);
+int printOctalRec(unsigned int num);
+int rot13(va_list list);
 
 
 #endif
