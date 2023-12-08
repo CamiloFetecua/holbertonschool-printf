@@ -41,9 +41,9 @@ int formatSpecifier(char format, va_list arguments)
 	else if (format == 'u')
 		result = (printU(arguments));
 	else if (format == 'o')
-		result = (printOctal(arguments))
+		result = (printOctal(arguments));
 	else if (format == 'R')
-		result = (rot13(argument))
+		result = (rot13(argument));
 	else
 	{
 		write(1, "%", 1);
