@@ -48,6 +48,5 @@ int formatSpecifier(char format, va_list arguments)
 	write(1, "%", 1);
 	write(1, &format, 1);
 	return (2);
->>>>>>> f585829003e3d38092480dde17e37e385acf3d5f
 }
 
