@@ -48,7 +48,7 @@ int printU(va_list arguments)
 
 /**
  * rot13 - Converts string to rot13
- * @list: string to convert
+ * @arguments: string to convert
  * Return: converted string
  */
 int rot13(va_list arguments)
@@ -58,8 +58,10 @@ int rot13(va_list arguments)
 	char orden[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char transformed, c;
+
 	if (s == NULL)
 		s = "(null)";
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		c = s[i];
@@ -82,4 +84,31 @@ int rot13(va_list arguments)
 		}
 	}
 	return (i);
+}
+
+/**
+ * printRev - Print a string in reverse order.
+ * @arguments: A pointer to the null-terminated string to print in reverse.
+ *
+ * This function prints the characters of the input string in reverse order
+ * using the write system call. It also returns the length of the original
+ * string (excluding the null-terminating byte).
+ *
+ * Return: The length of the original string.
+ */
+int printRev(va_list arguments)
+{
+	int count = 0;
+	int length;
+	char *rev = va_arg(arguments, char *);
+
+	while (rev[count] != '\0')
+		count++;
+
+	length = count;
+
+	for (count = length - 1; count >= 0; count--)
+		write(1, &rev[count], 1);
+
+	return (length);
 }
